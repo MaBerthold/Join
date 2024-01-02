@@ -21,6 +21,7 @@
     <script src="../js/script.js"></script>
     <script src="../js/addTaskPopup.js"></script>
     <script src="../js/addTask.js"></script>
+
 </head>
 
 <body id="body" onload="init()">
@@ -29,7 +30,7 @@
     </div>
 
     <div class="animation-maincontainer" id="added-to-board-animation">
-        <div class="animation-added-to-board" >
+        <div class="animation-added-to-board">
             Task added to board <img src="../img/board.png" alt="board">
         </div>
     </div>
@@ -56,7 +57,7 @@
                     <div class="description fd_column">
                         <span>Description<span class="required-star">*</span></span>
                         <textarea class="task_input_field_styling" name="description" id="add_task_description"
-                            cols="30" rows="5" placeholder="Enter a description"  maxlength="100"></textarea>
+                            cols="30" rows="5" placeholder="Enter a description" maxlength="100"></textarea>
                         <div id="red-warning-txt-description"></div>
                     </div>
                     <!-- USER SELECTION -->
@@ -150,7 +151,8 @@
     </div>
 
     </footer>
-   
+
+    <div w3-include-html="./navbar-responsive.html"></div> 
 
 
 </body>

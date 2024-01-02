@@ -30,7 +30,7 @@ function getInitialsHeader() {
  */
 function initialsHeader() {
     let initialsCircle = document.getElementById('header-initials');
-    
+
     if (currentUser == '') {
         initialsCircle.innerHTML = 'G';
     } else {
@@ -54,7 +54,7 @@ async function includeHTML() {
     let includeElements = document.querySelectorAll('[w3-include-html]');
     for (let i = 0; i < includeElements.length; i++) {
         const element = includeElements[i];
-        file = element.getAttribute("w3-include-html"); 
+        let file = element.getAttribute("w3-include-html");
         let resp = await fetch(file);
         if (resp.ok) {
             element.innerHTML = await resp.text();
@@ -75,7 +75,7 @@ function convertCurrentURLToHTTP() {
     if (currentURL.startsWith('https://')) {
         // Replace 'https://' with 'http://'
         const convertedURL = currentURL.replace(/^https:\/\//i, 'http://');
-        
+
         // Optional: Set the new URL as the location for redirection
         // window.location.href = convertedURL;
 
@@ -87,18 +87,18 @@ function convertCurrentURLToHTTP() {
 }
 
 // JavaScript-Code zum Schließen des Menüs beim Klicken außerhalb des Menüs
-document.addEventListener("click", function(event) {
+document.addEventListener("click", function (event) {
     let menu = document.getElementById("header-initials-menu");
     let targetElement = event.target; // Das Element, auf das geklickt wurde
-  
+
     // Überprüfen, ob das geklickte Element innerhalb des Menüs liegt oder das Menü selbst ist
     if (!menu.contains(targetElement) && targetElement.id !== "header-initials") {
-      menu.classList.add("d-none"); // Fügt die Klasse "d-none" hinzu, um das Menü auszublenden
+        menu.classList.add("d-none"); // Fügt die Klasse "d-none" hinzu, um das Menü auszublenden
     }
-  });
-  
-  function openInitialMenu() {
+});
+
+function openInitialMenu() {
     var menu = document.getElementById("header-initials-menu");
     menu.classList.toggle("d-none"); // Wechselt zwischen den Klassen "d-none" und "d-block", um das Menü anzuzeigen/auszublenden
-  }
+}
 

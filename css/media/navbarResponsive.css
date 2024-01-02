@@ -33,3 +33,28 @@
     background-color: #091931;
     border-radius: 16px !important;
 }
+
+.marked-link {
+    background-color: #091931 !important;
+    border-radius: 16px;
+}
+
+@media(max-width: 456px) {
+    .mobile-navbar span {
+        font-size: 14px;
+    }
+
+    .responsive-navigation-link {
+        padding: 16px;
+    }
+}
+
+@media(max-width: 365px) {
+    .mobile-navbar span {
+        font-size: 12px;
+    }
+
+    .responsive-navigation-link {
+        padding: 12px;
+    }
+}

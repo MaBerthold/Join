@@ -16,6 +16,7 @@ async function init() {
     await loadUsers();
     await loadAllTasks();
     await initHeader();
+    checkFocusNavMobile();
 }
 
 

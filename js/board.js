@@ -13,6 +13,7 @@ async function initBoard(){
     await loadUsersBoard();
     await loadAllTasks();
     await initHeader();
+    checkFocusNavMobile();
     updateID();
     updateBoard();
 }

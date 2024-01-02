@@ -6,6 +6,7 @@ async function initContact() {
     await showLocalStorage();
     await loadUsers();
     await initHeader();
+    checkFocusNavMobile();
     renderContacts();
 }
 //Wählt zufällige Farbe aus colors

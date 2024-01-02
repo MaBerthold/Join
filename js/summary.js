@@ -5,6 +5,7 @@ async function init(){
     await loadAllTasks();
     await loadCurrentUser();
     await initHeader();
+    checkFocusNavMobile();
     loadSummary();
     loadGreets();
 }
